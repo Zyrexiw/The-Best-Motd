@@ -81,6 +81,6 @@ local function TheBestMOTDOpen()
 end
 net.Receive("TheBestMotd::NetsOpen", TheBestMOTDOpen)
 
-concommand.Add("cl_test_1", function()
+concommand.Add("cl_openmotd", function()
     TheBestMOTDOpen()
 end)
