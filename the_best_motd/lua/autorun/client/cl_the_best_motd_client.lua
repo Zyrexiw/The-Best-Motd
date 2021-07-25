@@ -20,7 +20,7 @@ end
 -- variable
 local gradientMaterial = Material("vgui/gradient-l", "smooth")
 
-local function TheBestMOTDOpen()
+function TheBestMOTDOpen()
     MotdFrame = vgui.Create("DFrame")
     MotdFrame:SetSize( ScrW(), ScrH() )
     MotdFrame:SetPos( 0, 0 )
