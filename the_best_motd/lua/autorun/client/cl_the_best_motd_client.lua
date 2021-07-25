@@ -15,7 +15,9 @@ local function ry(y) return y/1080*ScrH() end
 local MotdFrame
 
 function remove()
- MotdFrame:Remove()
+    if IsValid(MotdFrame) then 
+        MotdFrame:Remove()
+    end
 end
 -- variable
 local gradientMaterial = Material("vgui/gradient-l", "smooth")
@@ -38,6 +40,12 @@ function TheBestMOTDOpen()
         surface.SetMaterial(ThebestMotdConfig.avatarserver)
         surface.DrawTexturedRect(rx(20), ry(40), rx(148), ry(148))
     end
+
+    
+    local Link = vgui.Create("DHTML", MotdFrame)
+    Link:SetSize(rx(800), ry(600))
+    Link:SetPos(rx(1000), ry(80))
+    Link:OpenURL(ThebestMotdConfig.link)
 
     local TitleButton = vgui.Create("DLabel", MotdFrame)
     TitleButton:SetText(ThebestMotdConfig.TitleServer)
@@ -84,3 +92,5 @@ net.Receive("TheBestMotd::NetsOpen", TheBestMOTDOpen)
 concommand.Add("cl_openmotd", function()
     TheBestMOTDOpen()
 end)
+
+
