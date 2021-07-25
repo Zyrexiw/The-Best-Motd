@@ -9,6 +9,7 @@ ThebestMotdConfig.ColorTable = {
 	["Background"] = Color(0, 0, 0, 700),
 	["Buttons"] = Color(41, 128, 185),
 }
+ThebestMotdConfig.link = "https://www.google.com/"
 
 ThebestMotdConfig.TitleServer = "Our Server" 
 
