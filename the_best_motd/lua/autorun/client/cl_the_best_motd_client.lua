@@ -88,7 +88,7 @@ function TheBestMOTDOpen()
 
 end
 net.Receive("TheBestMotd::NetsOpen", TheBestMOTDOpen)
-
+-- console commmand for open motd
 concommand.Add("cl_openmotd", function()
     TheBestMOTDOpen()
 end)
